@@ -1,4 +1,4 @@
-# Promptoteca
+# Biblioteca de Prompts
 
 Site de estudo de engenharia de prompts, com cards, checklist PACREF, uma visualização do mecanismo da repetição de prompt e exercícios de memorização.
 
