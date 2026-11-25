@@ -9,17 +9,150 @@
 /* Acréscimos da edição Pesquisa */
 .panel{background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:22px}.panel h3{font-size:24px;margin-bottom:6px}.panel>p{max-width:780px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}.small-note{font-size:13px;color:var(--muted)}.mode-switch{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.mode-switch button{border:1px solid var(--line);background:transparent;border-radius:40px;padding:8px 18px;color:var(--ink);font-size:14px}.mode-switch button[aria-pressed=true]{background:var(--green);color:var(--soft);border-color:var(--green)}.copy-block{margin:14px 0}.copy-block .eyebrow{margin-bottom:8px;color:var(--bronze)}.tok-row{display:flex;flex-wrap:wrap;gap:8px}.tok{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:8px 13px;font-size:15px;color:var(--ink)}.tok.q{border-style:dashed}.tok.sees{background:#DDE8E2;border-color:var(--greenlight)}.tok.self{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:650}.tok.blind{opacity:.38}.readout{margin-top:16px;padding:16px 18px;border-left:5px solid var(--gold);background:var(--paper);border-radius:0 12px 12px 0}.meter{display:grid;grid-template-columns:140px 1fr 70px;gap:12px;align-items:center;margin:10px 0}.track{background:var(--paperdark);border-radius:8px;height:24px;overflow:hidden}.track i{display:block;height:100%;background:var(--greenlight)}.track i.hi{background:var(--green)}.bar{display:flex;height:30px;border-radius:9px;overflow:hidden;background:var(--paperdark);margin:8px 0 6px}.bar span{display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--soft);white-space:nowrap;overflow:hidden}.b-win{background:var(--green)}.b-tie{background:var(--greenlight)}.b-loss{background:var(--red)}.fact{display:grid;grid-template-columns:1.1fr auto 2fr;gap:16px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}.fact:last-child{border-bottom:0}.fact q{font-style:italic;quotes:"“" "”"}.chip{font-size:12px;font-weight:700;letter-spacing:.04em;padding:4px 11px;border-radius:20px;white-space:nowrap;display:inline-block}.c-ok{background:var(--green);color:var(--soft)}.c-warn{background:var(--goldlight);color:var(--ink)}.c-hyp{background:var(--ink2);color:var(--soft)}.c-no{background:var(--red);color:var(--soft)}.c-op{background:var(--paperdark);color:var(--ink)}details.refs{margin-top:30px;background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:6px 24px}details.refs summary{cursor:pointer;padding:16px 0;font:22px Georgia,serif}details.refs ol{padding-left:20px;font-size:14px}details.refs li{margin:10px 0;overflow-wrap:anywhere}
 @media(min-width:1450px){main{padding:0 50px}}@media(max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.intro-note{display:none}.intro{grid-template-columns:1fr}.main-tabs{grid-template-columns:repeat(4,1fr)}.main-tabs button{padding:12px;gap:8px}.main-tabs button span{font-size:14px}}@media(max-width:800px){.grid2{grid-template-columns:1fr}.fact{grid-template-columns:1fr;gap:8px}}@media(max-width:620px){header{padding:18px 20px}.edition{display:none}main{padding:0 20px}.intro{padding:30px 0}.main-tabs{grid-template-columns:repeat(2,1fr);gap:4px;padding:5px;margin-bottom:28px}.main-tabs button{flex-direction:column;align-items:flex-start;gap:3px;padding:9px;font-size:12px}.main-tabs button span{font-size:13px;line-height:1.4}.section-heading{align-items:flex-start}h2{font-size:26px}.count{font-size:12px;padding:5px 9px}.cards{grid-template-columns:1fr}.card-top{min-height:0}.card-text{min-height:0}.pacref-buttons{grid-template-columns:repeat(3,1fr);gap:8px}.pacref-panel,.prompt-example{padding:23px}.practice-card{padding:25px}.practice-nav{flex-wrap:wrap}.practice-nav span{order:3;width:100%}footer{grid-template-columns:1fr;gap:20px}.categories button{padding:7px 13px}.intro>div>p:last-child{font-size:15px}.meter{grid-template-columns:1fr 60px;gap:6px}.meter span{grid-column:1/-1}.panel{padding:20px}}@media(prefers-reduced-motion:reduce){button{transition:none}button:hover{transform:none}}
+/* Evolução dos prompts */
+.main-tabs{grid-template-columns:repeat(5,1fr)}
+.main-tabs button{min-width:0}
+@media(max-width:1000px){.main-tabs{grid-template-columns:repeat(5,1fr)}.main-tabs button{padding:10px 9px;flex-direction:column;align-items:flex-start;gap:2px}.main-tabs button span{font-size:13px;line-height:1.3}}
+@media(max-width:700px){.main-tabs{grid-template-columns:repeat(2,1fr)}.main-tabs button:last-child{grid-column:1/-1}}
+.study-card[data-group="Evolução"] .card-top{background:var(--gold);color:var(--ink)}
+.evo-nav{margin:6px 0 22px}
+.evo-grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:20px}
+.evo-grid3 .panel{margin:0}
+.evo-num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:11px;background:var(--ink);color:var(--goldlight);font:22px Georgia,serif;margin-bottom:10px}
+.evo-d{background:var(--soft);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.evo-d summary{cursor:pointer;padding:15px 18px;font-weight:650;display:flex;gap:12px;align-items:center;list-style:none}
+.evo-d summary::-webkit-details-marker{display:none}
+.evo-d summary::after{content:"+";margin-left:auto;font-size:22px;color:var(--green);transition:transform .16s}
+.evo-d[open] summary::after{transform:rotate(45deg)}
+.evo-d[open]{border-color:var(--green)}
+.evo-d .evo-body{padding:0 18px 16px;color:var(--muted)}
+.evo-d .evo-body p{margin:0 0 8px}
+.evo-link{background:var(--paperdark);border-radius:18px;padding:22px 26px;margin-top:20px}
+.evo-link h3{font-size:22px;margin-bottom:6px}
+.evo-link p{margin:0 0 8px;max-width:820px}
+.evo-link p:last-child{margin:0}
+.evo-ctrl{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 16px}
+.evo-stack{display:grid;gap:10px;margin-bottom:26px}
+.evo-piece{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:start;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:14px 16px;opacity:.35;transform:translateX(-8px);transition:opacity .45s,transform .45s}
+.evo-piece.show{opacity:1;transform:none}
+.evo-piece b{display:block;text-align:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:7px 6px;border-radius:9px;color:var(--soft)}
+.evo-piece p{margin:0}
+.evo-p1 b{background:var(--green)}.evo-p2 b{background:var(--bronze)}.evo-p3 b{background:var(--red)}.evo-p4 b{background:var(--ink)}
+.evo-ba .panel{margin:0}
+.evo-ba .before{border-left:5px solid var(--red)}
+.evo-ba .after{border-left:5px solid var(--green)}
+.evo-lab{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.before .evo-lab{color:var(--red)}.after .evo-lab{color:var(--green)}
+.evo-hl{background:rgba(155,74,61,.18);border-radius:4px;padding:0 3px}
+.evo-levels{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:6px 0 18px}
+.evo-levels button{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:15px 6px;color:var(--ink);font:700 15px Consolas,monospace}
+.evo-levels button[aria-pressed=true]{background:var(--green);color:var(--soft);border-color:var(--green)}
+.evo-ex{border-left:3px solid var(--gold);background:var(--paper);padding:10px 14px;border-radius:0 10px 10px 0;margin:12px 0}
+.evo-meters{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+.evo-meters small{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.evo-gauge{height:11px;border-radius:99px;background:var(--paperdark);overflow:hidden;margin-top:6px}
+.evo-gauge i{display:block;height:100%;width:0;background:var(--green);border-radius:99px;transition:width .5s}
+.evo-diag{display:grid;gap:10px;margin-bottom:14px}
+.evo-diag button{text-align:left;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:15px 18px;color:var(--ink);font-weight:600}
+.evo-diag button[aria-pressed=true]{background:var(--ink);color:var(--soft);border-color:var(--ink)}
+.evo-chk{display:grid;gap:8px}
+.evo-chk label{display:flex;gap:12px;align-items:center;padding:13px 16px;background:var(--soft);border:1px solid var(--line);border-radius:14px;cursor:pointer}
+.evo-chk input{width:20px;height:20px;accent-color:#2F6B63}
+.evo-chk label:has(input:checked){border-color:var(--green);background:var(--paperdark)}
+.evo-bar{height:10px;background:var(--paperdark);border-radius:99px;overflow:hidden;margin:16px 0 6px}
+.evo-bar i{display:block;height:100%;width:0;background:var(--green);transition:width .4s}
+@media(max-width:800px){.evo-grid3,.evo-meters{grid-template-columns:1fr}.evo-piece{grid-template-columns:1fr}.evo-piece b{text-align:left;width:max-content;padding:6px 12px}}
+@media(max-width:620px){.evo-levels{gap:5px}.evo-levels button{font-size:12px;padding:12px 2px}.evo-link{padding:18px}}
+@media(prefers-reduced-motion:reduce){.evo-piece,.evo-gauge i,.evo-bar i,.evo-d summary::after{transition:none}}
 </style>
 </head>
 <body>
 <header><a class="brand" href="./" aria-label="Biblioteca de Prompts, voltar à página inicial"><span class="brand-icon" aria-hidden="true">P<span>✦</span></span><div><strong>Biblioteca de Prompts</strong><span>Seu caderno de inteligência artificial</span><span class="brand-by">Por: Carlos Hernane de Oliveira</span></div></a><span class="edition">ESTUDAR · ENTENDER · APLICAR</span></header>
 <main>
 <section class="intro"><div><p class="eyebrow">ENGENHARIA DE PROMPTS NA PRÁTICA</p><h1>Uma ideia de cada vez.<br><em>Conhecimento que fica.</em></h1><p>Explore os conceitos, veja exemplos, confira o que a pesquisa mostra e encontre palavras simples para lembrar do que aprendeu.</p></div><aside class="intro-note"><span aria-hidden="true">✦</span><p>O melhor prompt começa<br>com um objetivo claro.</p><small>Você orienta. A IA amplia.</small></aside></section>
-<nav class="main-tabs" aria-label="Áreas de estudo"><button class="selected" data-view="learn" aria-pressed="true">01 <span>Explorar os cards</span></button><button data-view="pacref" aria-pressed="false">02 <span>Entender o PACREF</span></button><button data-view="mecanismo" aria-pressed="false">03 <span>Ver o mecanismo</span></button><button data-view="practice" aria-pressed="false">04 <span>Praticar de memória</span></button></nav>
+<nav class="main-tabs" aria-label="Áreas de estudo"><button class="selected" data-view="learn" aria-pressed="true">01 <span>Explorar os cards</span></button><button data-view="pacref" aria-pressed="false">02 <span>Entender o PACREF</span></button><button data-view="evolucao" aria-pressed="false">03 <span>Evolução dos prompts</span></button><button data-view="mecanismo" aria-pressed="false">04 <span>Ver o mecanismo</span></button><button data-view="practice" aria-pressed="false">05 <span>Praticar de memória</span></button></nav>
 
 <section id="learn" class="view"><div class="section-heading"><div><p class="eyebrow">SEU ACERVO DE IDEIAS</p><h2>Aprenda. Conecte. Aplique.</h2></div><span id="card-count" class="count"></span></div><div id="categories" class="categories" aria-label="Temas dos cards"></div><p class="hint">Em cada card, escolha o que quer descobrir. A explicação aparece logo abaixo dos botões.</p><div class="cards" id="cards"></div></section>
 
 <section id="pacref" class="view" hidden><div class="section-heading"><div><p class="eyebrow">UM CHECKLIST, NÃO UMA FÓRMULA</p><h2>As seis peças de um bom pedido.</h2></div></div><p class="section-copy">Selecione uma letra para entender sua função. Use apenas as peças que ajudam a sua tarefa.</p><div class="pacref-buttons" id="pacref-buttons"></div><article id="pacref-panel" class="pacref-panel" aria-live="polite"></article><div class="prompt-example"><p class="eyebrow">AS PEÇAS JUNTAS · EXEMPLO ORIGINAL</p><h3>Um pedido que já chega com direção.</h3><p><b>Persona:</b> atue como analista de projetos.<br><b>Ação:</b> resuma o relatório anexado e identifique três riscos.<br><b>Contexto:</b> o público é uma equipe gestora que precisa decidir prioridades da semana.<br><b>Referências:</b> use somente o relatório; sinalize informações ausentes.<br><b>Estrutura:</b> mantenha estas instruções separadas por rótulos.<br><b>Formato:</b> entregue uma tabela com risco, evidência e próximo passo sugerido.</p></div></section>
+
+<section id="evolucao" class="view" hidden>
+<div class="section-heading"><div><p class="eyebrow">INTELIGÊNCIA ARTIFICIAL · EVOLUÇÃO DOS PROMPTS</p><h2>O manual de estagiário envelheceu.</h2></div></div>
+<p class="section-copy">Os modelos atuais planejam e conferem sozinhos. Veja o que muda no jeito de pedir e como escolher o esforço. Conteúdo conferido na documentação oficial da Anthropic, consultada em nov. 2026; ela muda por modelo, então confirme a versão atual.</p>
+<div class="categories evo-nav" id="evo-nav" role="group" aria-label="Seções de Evolução dos prompts"><button type="button" data-evo="visao" aria-pressed="true">O que mudou</button><button type="button" data-evo="formula" aria-pressed="false">A fórmula</button><button type="button" data-evo="esforco" aria-pressed="false">Esforço</button><button type="button" data-evo="errou" aria-pressed="false">Errou?</button><button type="button" data-evo="check" aria-pressed="false">Checklist</button></div>
+
+<div id="evo-visao" class="evo-sec">
+<div class="evo-grid3">
+<div class="panel"><span class="evo-num">1</span><h3>Prompt enxuto</h3><p>Objetivo e resultado esperado, em vez de uma lista de regras.</p></div>
+<div class="panel"><span class="evo-num">2</span><h3>Pedir, contextualizar, mostrar</h3><p>O que você quer, o que só você sabe e um exemplo do que é bom.</p></div>
+<div class="panel"><span class="evo-num">3</span><h3>Esforço com critério</h3><p>Padrão na maioria dos casos; subir só com motivo.</p></div>
+</div>
+<details class="evo-d" open><summary><span class="chip c-ok">Confirmado</span> Prompt gigante e ênfase em excesso pioram</summary><div class="evo-body"><p>Modelos recentes respondem mais ao que está no prompt e podem exagerar. A documentação sugere trocar “CRÍTICO: você DEVE usar…” por “use… quando…” e remover instruções do tipo “na dúvida, use”.</p></div></details>
+<details class="evo-d"><summary><span class="chip c-ok">Confirmado</span> Seja claro e explique o motivo</summary><div class="evo-body"><p>Teste sugerido: mostre o prompt a um colega com pouco contexto. Se ele se confundir, o modelo também.</p><p>Explicar o porquê (“o texto será lido por um leitor de voz”) funciona melhor que “NUNCA use reticências”: o modelo generaliza a partir da explicação.</p></div></details>
+<details class="evo-d"><summary><span class="chip c-warn">Parcial</span> “Persona não é necessária”</summary><div class="evo-body"><p>A documentação recomenda definir um papel no system prompt (“mesmo uma única frase faz diferença”), mas não o exige. É opcional e barato, não proibido.</p></div></details>
+<div class="evo-link"><h3>E o PACREF?</h3>
+<p>Continua útil como checklist, e a aba 02 já diz que nem toda tarefa exige as seis peças. O que muda é o peso de cada uma: a <b>Persona</b> passa a ser opcional (uma frase basta), e o <b>Contexto</b> e os <b>Exemplos</b> seguem sendo o que mais ajuda. No <b>Formato</b>, diga o que fazer, não só o que evitar.</p>
+<p>Ligação com a aba 04: a repetição de prompt foi testada em modelos sem raciocínio, e com raciocínio ativo o efeito foi neutro. Os modelos atuais ajustam essa profundidade pelo esforço, que você vê na seção ao lado.</p></div>
+</div>
+
+<div id="evo-formula" class="evo-sec" hidden>
+<p class="section-copy">Monte o prompt peça por peça e compare com o manual antigo.</p>
+<div class="evo-ctrl"><button type="button" id="evo-montar" class="primary">▶ Montar o prompt</button><button type="button" id="evo-zerar" class="secondary">Reiniciar</button></div>
+<div class="evo-stack" id="evo-stack">
+<div class="evo-piece evo-p1"><b>Pedido</b><p>Transforme esta palestra em 10 posts para o Instagram da clínica.</p></div>
+<div class="evo-piece evo-p2"><b>Contexto</b><p>O público são mulheres de 40 a 60 anos que têm medo de dentista.</p></div>
+<div class="evo-piece evo-p3"><b>Exemplo</b><p>Anexei 3 posts que tiveram muitos comentários; siga esse tom.</p></div>
+<div class="evo-piece evo-p4"><b>Fecho</b><p>Se algo não estiver claro, pergunte antes de começar.</p></div>
+</div>
+<h3 style="margin-bottom:14px">Antes e depois</h3>
+<div class="grid2 evo-ba">
+<div class="panel before"><span class="evo-lab">Antes · manual</span><p>Você é um <span class="evo-hl">especialista sênior</span> em marketing. Siga <span class="evo-hl">15 regras</span>: seja <span class="evo-hl">detalhado</span>, seja <span class="evo-hl">conciso</span>, tom acolhedor, até 3 emojis, sem jargão… Gere posts.</p></div>
+<div class="panel after"><span class="evo-lab">Depois · resultado + contexto</span><p>Transforme esta palestra em 10 posts para o Instagram da clínica. Público: mulheres de 40 a 60 anos com medo de dentista. Anexei 3 posts de sucesso; siga o tom. Se algo não estiver claro, pergunte.</p></div>
+</div>
+<p class="small-note">Em destaque: o papel genérico e as regras que se contradizem (“detalhado” × “conciso”). Entrou o que só quem conhece o negócio sabe.</p>
+<details class="evo-d" style="margin-top:16px"><summary>Outras técnicas da documentação</summary><div class="evo-body">
+<p>• Diga o que fazer, não só o que evitar: “responda em parágrafos corridos” em vez de “não use markdown”.</p>
+<p>• Separe partes com tags XML (&lt;contexto&gt;, &lt;exemplo&gt;) quando o pedido misturar instruções e documentos.</p>
+<p>• Documentos longos no topo, pergunta no fim.</p>
+<p>• Seja explícito sobre agir: “altere esta função” age; “você poderia sugerir…” só sugere.</p>
+<p>• Exemplos: relevantes, diversos, de 3 a 5.</p></div></details>
+</div>
+
+<div id="evo-esforco" class="evo-sec" hidden>
+<p class="section-copy">Esforço (effort) é um sinal de quão fundo o modelo vai e quanto gasta, não um botão de inteligência. Escolha um nível.</p>
+<div class="evo-levels" id="evo-levels"><button type="button" data-i="0" aria-pressed="false">low</button><button type="button" data-i="1" aria-pressed="true">medium</button><button type="button" data-i="2" aria-pressed="false">high</button><button type="button" data-i="3" aria-pressed="false">xhigh</button><button type="button" data-i="4" aria-pressed="false">max</button></div>
+<div class="panel" aria-live="polite"><h3 id="evo-et"></h3><p id="evo-ed"></p><div class="evo-ex" id="evo-ex"></div>
+<div class="evo-meters"><div><small>Profundidade</small><div class="evo-gauge"><i id="evo-m1"></i></div></div><div><small>Custo e tempo</small><div class="evo-gauge"><i id="evo-m2"></i></div></div><div><small>Sua participação</small><div class="evo-gauge"><i id="evo-m3"></i></div></div></div>
+<p class="small-note" style="margin-top:14px">Os medidores são ilustrativos, não dados da documentação.</p></div>
+<details class="evo-d" open><summary><span class="chip c-ok">Documentação</span> Cuidados confirmados</summary><div class="evo-body">
+<p>• Esforço é um sinal de comportamento, não um orçamento rígido: afeta texto, ferramentas e raciocínio. O único limite rígido é <code>max_tokens</code>.</p>
+<p>• O nível <code>max</code> pode ser mais lento e caro por pouco ganho em alguns modelos.</p>
+<p>• Em <code>high</code> ou acima, defina um <code>max_tokens</code> alto.</p>
+<p>• O padrão varia por modelo (Opus 5.5 e Haiku 5.5: <code>medium</code>; vários outros: <code>high</code>). Confira o seu.</p>
+<p>• Trocar o esforço entre chamadas pode invalidar o cache de prompt; as fontes divergem sobre isso.</p></div></details>
+</div>
+
+<div id="evo-errou" class="evo-sec" hidden>
+<p class="section-copy">Errou? Escolha o que aconteceu e veja o próximo passo, com base no blog do Claude Code sobre modelo e esforço.</p>
+<div class="evo-diag" id="evo-diag"><button type="button" data-k="a" aria-pressed="false">Pulou arquivos, não conferiu, não rodou os testes</button><button type="button" data-k="b" aria-pressed="false">Faltou saber algo sobre o meu caso</button><button type="button" data-k="c" aria-pressed="false">O contexto está bom e o erro persiste</button></div>
+<div id="evo-res" aria-live="polite"></div>
+</div>
+
+<div id="evo-check" class="evo-sec" hidden>
+<p class="section-copy">Marque conforme revisa o seu pedido.</p>
+<div class="evo-chk" id="evo-chk">
+<label><input type="checkbox"> O resultado esperado está claro?</label>
+<label><input type="checkbox"> Dei o contexto que o modelo não tem (público, restrições, finalidade)?</label>
+<label><input type="checkbox"> Há um exemplo do que é bom?</label>
+<label><input type="checkbox"> Alguma instrução contradiz outra (detalhado × curto)?</label>
+<label><input type="checkbox"> Troquei “nunca/sempre/CRÍTICO” por instrução normal com motivo?</label>
+<label><input type="checkbox"> Usei o esforço padrão, com motivo para mudar?</label>
+<label><input type="checkbox"> Um colega leria isto e entenderia o que fazer?</label>
+</div>
+<div class="evo-bar"><i id="evo-bar"></i></div><p class="small-note" id="evo-barT">0 de 7</p>
+<div class="evo-link"><h3>O prompt ficou simples. O critério ficou mais importante.</h3><p>Pedido curto só funciona para quem sabe o que é um bom resultado. O ativo é o seu histórico, os seus dados e o seu jeito de conferir o trabalho.</p></div>
+</div>
+</section>
 
 <section id="mecanismo" class="view" hidden>
 <div class="section-heading"><div><p class="eyebrow">DENTRO DO MODELO · PESQUISA</p><h2>Quem enxerga quem?</h2></div></div>
@@ -97,7 +230,11 @@
   ["Raciocínio passo a passo","Pedir etapas intermediárias melhorou o desempenho em problemas de raciocínio nos estudos de Wei et al. (com exemplos) e Kojima et al. (com a instrução “pense passo a passo”). O custo é uma resposta mais longa, com mais tokens e mais tempo.","Etapas primeiro, resposta depois.","Que custo acompanha o pedido de raciocínio passo a passo?","Técnicas"],
   ["Posição da informação","Liu et al. estudaram como modelos usam contextos longos e observaram que a informação no meio do contexto é usada pior do que a do começo ou do fim. O estudo da repetição também viu diferença conforme a ordem do pedido (opções antes ou depois da pergunta).","Começo e fim são mais seguros que o meio.","Onde colocar a instrução mais importante em um pedido longo?","Técnicas"],
   ["Autoconsistência","Wang et al. propõem gerar vários caminhos de raciocínio para a mesma pergunta e escolher a resposta mais consistente entre eles. Melhora a confiabilidade em tarefas de raciocínio, ao custo de gerar mais respostas.","Várias respostas, uma conferência.","O que a autoconsistência compara?","Técnicas"],
-  ["Reler a pergunta (RE2)","Xu et al. (EMNLP 2024) propõem apresentar a pergunta duas vezes. Em 14 conjuntos de dados e 112 experimentos, melhorou o raciocínio na maioria dos cenários, exceto alguns no ChatGPT. Difere da repetição do Google: o RE2 repete a pergunta, e o estudo do Google repete o prompt inteiro.","A primeira leitura prepara a segunda.","Em que o RE2 difere de repetir o prompt inteiro?","Técnicas"]
+  ["Reler a pergunta (RE2)","Xu et al. (EMNLP 2024) propõem apresentar a pergunta duas vezes. Em 14 conjuntos de dados e 112 experimentos, melhorou o raciocínio na maioria dos cenários, exceto alguns no ChatGPT. Difere da repetição do Google: o RE2 repete a pergunta, e o estudo do Google repete o prompt inteiro.","A primeira leitura prepara a segunda.","Em que o RE2 difere de repetir o prompt inteiro?","Técnicas"],
+  ["Do manual ao resultado","Os modelos atuais planejam a tarefa e conferem o resultado sozinhos. Por isso, o pedido deixa de ser um manual de passos e passa a descrever o resultado esperado, o contexto e o critério de qualidade. Instruções demais podem se contradizer.","Descreva o resultado, não o passo a passo.","O que mudou no papel do prompt com modelos mais capazes?","Evolução"],
+  ["Pedir, contextualizar, mostrar","Três partes: o pedido direto, o contexto que só você tem (público, restrições, finalidade) e um exemplo do que é bom. Um fecho opcional é pedir que a IA pergunte antes de começar, se algo não estiver claro.","Pedido, contexto, exemplo.","Quais são as três partes do pedido atual e o que cada uma traz?","Evolução"],
+  ["Esforço (effort)","Parâmetro que indica o quanto o modelo se aprofunda e gasta: low, medium, high, xhigh e max (a disponibilidade varia por modelo). É um sinal de comportamento, não um orçamento rígido, e níveis altos custam mais e demoram mais. O padrão serve à maioria dos casos. Documentação consultada em nov. 2026.","Padrão no dia a dia; suba com motivo.","O esforço é um botão de inteligência? Quando faz sentido subi-lo?","Evolução"],
+  ["Errou? Diagnostique","Se o modelo pulou etapas, não conferiu ou não testou, aumentar o esforço ajuda. Se faltou informação, melhore o contexto. Se o contexto está bom e o erro persiste, considere um modelo mais capaz.","Esforço, contexto ou modelo?","Em que caso você sobe o esforço e em que caso melhora o contexto?","Evolução"]
 ];
 const EXAMPLES = [
   "Em vez de “fale sobre vendas”, peça: “Resuma os resultados do relatório em cinco tópicos para a reunião da equipe”.",
@@ -130,12 +267,17 @@ const EXAMPLES = [
   "“Resolva em etapas numeradas e só depois dê a resposta final.”",
   "Em um pedido com vários documentos, coloque a instrução principal no começo e repita a restrição crítica no final.",
   "Para uma decisão importante, peça a análise 3 a 5 vezes em conversas separadas e examine onde as respostas divergem.",
-  "Depois da pergunta, acrescente “Leia a pergunta novamente:” e repita a pergunta."
+  "Depois da pergunta, acrescente “Leia a pergunta novamente:” e repita a pergunta.",
+
+  "Antes: “Você é um especialista com 20 anos de experiência. Siga estas 15 regras…”. Agora: “Prepare o resumo desta reunião para a diretoria e liste as decisões pendentes.”",
+  "“Transforme esta palestra em 10 posts. O público são mulheres de 40 a 60 anos com medo de dentista. Anexei 3 posts de sucesso; siga o tom. Se algo não estiver claro, pergunte.”",
+  "Baixo para pedir 12 opções de assunto e escolher; médio para resumir uma reunião; alto para um relatório em que os números precisam bater.",
+  "O modelo pulou a conferência dos dados: suba o esforço. Faltou dizer o público: melhore o contexto. Tudo estava claro e errou: teste um modelo maior."
 ];
 
-const views=['learn','pacref','mecanismo','practice'];
+const views=['learn','pacref','evolucao','mecanismo','practice'];
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{views.forEach(v=>document.getElementById(v).hidden=v!==b.dataset.view);document.querySelectorAll('[data-view]').forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',x===b)});}));
-const groups=['Todos','Fundamentos','Técnicas','Verificação','Aplicação','Pesquisa'];
+const groups=['Todos','Fundamentos','Técnicas','Verificação','Aplicação','Pesquisa','Evolução'];
 const groupFor=i=>ITEMS[i][4];
 const cards=document.getElementById('cards');
 function renderCards(group){cards.replaceChildren();let count=0;ITEMS.forEach((item,i)=>{if(group!=='Todos'&&groupFor(i)!==group)return;count++;const card=document.createElement('article');card.className='study-card';card.dataset.group=groupFor(i);card.innerHTML='<div class="card-top"><div class="card-meta"><span></span><span></span></div><h3></h3></div><div class="card-body"><div class="card-tabs" aria-label="Conteúdo do card"></div><p class="card-text" aria-live="polite"></p></div>';card.querySelector('.card-meta span').textContent=groupFor(i);card.querySelector('.card-meta span:last-child').textContent=String(i+1).padStart(2,'0');card.querySelector('h3').textContent=item[0];const body=card.querySelector('.card-text');const labels=['Conceito','Exemplo','Para lembrar'];const texts=[item[1],EXAMPLES[i],item[2]];labels.forEach((label,j)=>{const b=document.createElement('button');b.textContent=label;b.type='button';b.setAttribute('aria-pressed',j===0);b.addEventListener('click',()=>{card.querySelectorAll('.card-tabs button').forEach(x=>x.setAttribute('aria-pressed',x===b));body.textContent=texts[j];});card.querySelector('.card-tabs').append(b);});body.textContent=item[1];cards.append(card);});document.getElementById('card-count').textContent=count+' cards';}
@@ -200,4 +342,41 @@ FACTS.forEach(f=>{const r=document.createElement('div');r.className='fact';const
 let current=0;let revealed=false;
 function practice(){const item=ITEMS[current];document.getElementById('practice-count').textContent=(current+1)+' de '+ITEMS.length;document.getElementById('practice-topic').textContent=item[0];document.getElementById('practice-question').textContent=item[3];const a=document.getElementById('practice-answer');a.replaceChildren();const p=document.createElement('p');p.textContent=item[1];const memory=document.createElement('strong');memory.textContent=item[2];a.append(p,memory);a.hidden=!revealed;document.getElementById('reveal').textContent=revealed?'Ocultar explicação':'Ver explicação';document.getElementById('reveal').setAttribute('aria-expanded',revealed);document.getElementById('previous').disabled=current===0;document.getElementById('next').disabled=current===ITEMS.length-1;}
 document.getElementById('reveal').addEventListener('click',()=>{revealed=!revealed;practice();});document.getElementById('previous').addEventListener('click',()=>{if(current>0)current--;revealed=false;practice();});document.getElementById('next').addEventListener('click',()=>{if(current<ITEMS.length-1)current++;revealed=false;practice();});practice();
+
+/* ---------- Evolução dos prompts ---------- */
+(function(){
+  var secs=[].slice.call(document.querySelectorAll('.evo-sec')),nav=[].slice.call(document.querySelectorAll('#evo-nav button'));
+  nav.forEach(function(b){b.addEventListener('click',function(){
+    nav.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    secs.forEach(function(s){s.hidden=s.id!=='evo-'+b.dataset.evo});
+  });});
+  var ps=[].slice.call(document.querySelectorAll('.evo-piece')),tm=[];
+  function limpar(){tm.forEach(clearTimeout);tm=[];}
+  document.getElementById('evo-montar').addEventListener('click',function(){limpar();ps.forEach(function(p){p.classList.remove('show')});ps.forEach(function(p,i){tm.push(setTimeout(function(){p.classList.add('show')},i*650));});});
+  document.getElementById('evo-zerar').addEventListener('click',function(){limpar();ps.forEach(function(p){p.classList.remove('show')});});
+  ps.forEach(function(p){p.classList.add('show')});
+  var D=[
+    ['low','Tarefa simples, alto volume ou subagentes, quando você revisa cada resposta.','“Me dê 12 opções de assunto para este e-mail.”',[18,15,95]],
+    ['medium','O dia a dia, quando você sabe o que quer e a tarefa está bem especificada. É o padrão em alguns modelos.','“Transforme esta reunião em resumo e lista de tarefas por pessoa.”',[40,35,70]],
+    ['high','Quando conferir é parte importante do trabalho: raciocínio complexo e dados que precisam bater.','“Monte o relatório do mês e confira se os números batem.”',[62,58,45]],
+    ['xhigh','Trabalho longo, com muitas partes e várias fontes, deixado rodando sozinho. É a exceção, porque custa caro.','“Compare as faturas dos últimos 12 meses com o extrato e marque as que não batem.”',[82,80,25]],
+    ['max','Problema difícil, sem a sua participação, em que o custo é secundário. Em alguns modelos o ganho sobre xhigh é pequeno.','“Encontre tudo neste contrato que pode me custar dinheiro.”',[100,100,10]]
+  ];
+  var lv=[].slice.call(document.querySelectorAll('#evo-levels button'));
+  function setLv(i){var d=D[i];lv.forEach(function(b,k){b.setAttribute('aria-pressed',k===i)});
+    document.getElementById('evo-et').textContent='Nível: '+d[0];document.getElementById('evo-ed').textContent=d[1];document.getElementById('evo-ex').textContent=d[2];
+    ['evo-m1','evo-m2','evo-m3'].forEach(function(id,k){document.getElementById(id).style.width=d[3][k]+'%'});}
+  lv.forEach(function(b){b.addEventListener('click',function(){setLv(+b.dataset.i)})});setLv(1);
+  var R={a:['Suba o esforço','O modelo tentou menos do que a tarefa pedia: pulou arquivos, não testou, não revisou. Aumentar o esforço compra justamente mais verificação.'],
+    b:['Melhore o contexto','Se faltou informação, o problema está antes do botão. Descreva o público, as restrições e o objetivo, e anexe um exemplo bom. Peça também: “Se algo não estiver claro, pergunte antes de começar”.'],
+    c:['Considere um modelo mais capaz','Se o contexto está bom e o erro continua, o blog do Claude Code sugere trocar para um modelo mais capaz, e não subir o esforço. O modelo define o quão capaz; o esforço, o quão minucioso.']};
+  var ob=[].slice.call(document.querySelectorAll('#evo-diag button')),out=document.getElementById('evo-res');
+  ob.forEach(function(b){b.addEventListener('click',function(){ob.forEach(function(o){o.setAttribute('aria-pressed',o===b)});var r=R[b.dataset.k];out.replaceChildren();
+    var c=document.createElement('div');c.className='panel';var h=document.createElement('h3');h.textContent='→ '+r[0];var p=document.createElement('p');p.textContent=r[1];c.append(h,p);out.append(c);});});
+  var cs=[].slice.call(document.querySelectorAll('#evo-chk input')),bar=document.getElementById('evo-bar'),bt=document.getElementById('evo-barT'),K='pb_evo_check';
+  try{var s=JSON.parse(localStorage.getItem(K)||'[]');cs.forEach(function(c,i){c.checked=!!s[i]});}catch(e){}
+  function up(){var n=cs.filter(function(c){return c.checked}).length;bar.style.width=(n/cs.length*100)+'%';bt.textContent=n===cs.length?'7 de 7: pronto para enviar!':n+' de '+cs.length;
+    try{localStorage.setItem(K,JSON.stringify(cs.map(function(c){return c.checked})));}catch(e){}}
+  cs.forEach(function(c){c.addEventListener('change',up)});up();
+})();
 </script></body></html>
